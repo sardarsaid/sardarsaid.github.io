@@ -1,14 +1,14 @@
-# Sardar79 — mechanical engineering portfolio
+# Sardar Said — mechanical engineering portfolio
 
-A buildless, responsive website prepared for **https://sardar79.github.io**. It has not been published. No real project models, images, résumé, email address, personal contributions, or engineering results were supplied; these remain explicit placeholders.
+A buildless, responsive website prepared for **https://sardarsaid.github.io**. No real project models, images, resume, email address, personal contributions, or engineering results were supplied; these remain explicit placeholders.
 
 ## Publish on GitHub Pages
 
-1. Sign in to GitHub as **Sardar79**. Create a public repository named **sardar79.github.io**. If it already exists, preserve its contents and review changes before replacing files.
+1. Sign in to GitHub as **sardarsaid**. Create a public repository named **sardarsaid.github.io**. If it already exists, preserve its contents and review changes before replacing files.
 2. Upload the **contents** of this folder into the repository root, not the enclosing `portfolio` folder or ZIP. `index.html` must be at the root beside `styles.css`, `app.js`, `content.js`, and `assets/`. Include `.nojekyll` (an empty file); `.gitkeep` files only preserve empty asset folders.
 3. Commit the files to `main`.
 4. Open **Settings → Pages → Build and deployment → Source → Deploy from a branch**. Choose **main** and **/(root)**, then Save.
-5. Watch the deployment under Actions. When successful, open **https://sardar79.github.io**. Publication can take up to 10 minutes.
+5. Watch the deployment under Actions. When successful, open **https://sardarsaid.github.io**. Publication can take up to 10 minutes.
 6. Later changes are published when committed to the selected branch. No npm installation, build command, or paid hosting is required.
 
 Official guide: https://docs.github.com/en/pages/quickstart
@@ -82,7 +82,7 @@ Use a simplified copy, remove hidden/internal hardware that does not serve the p
 For a quick text/layout check, open `index.html` directly. For reliable model testing, serve this folder over HTTP (for example, if Python is installed, run `python -m http.server 8000` in this folder and open http://localhost:8000). Stop that local server with Ctrl+C when done. The published Pages site serves over HTTPS.
 
 - Check the page at phone and desktop widths, keyboard navigation, anchor links, and expandable notes.
-- Add the real résumé and contact details before sharing with recruiters.
+- Add the real resume and contact details before sharing with recruiters.
 - Load each actual GLB, inspect it from all sides, and check reset and auto-rotate.
 - Verify photo descriptions and that no placeholder wording is mistaken for a completed result.
 - Review team-owned material before publishing. GitHub Pages assets are publicly downloadable; a viewer is not copy protection.

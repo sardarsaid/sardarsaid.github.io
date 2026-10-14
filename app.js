@@ -45,6 +45,6 @@
     [['Role & scope',p.role||'Personal contributions and project scope to be added.'],['Design approach',p.approach||'Design decisions, constraints, and iterations to be documented.'],['Evidence & reflection',p.evidence||'Drawings, verified results, and lessons learned to be added.']].forEach(([k,v])=>dl.append(make('dt','',k),make('dd','',v)));
     details.append(dl);copy.append(details);article.append(media,copy);document.querySelector('#project-list').append(article);
   });
-  if(config.resume){const a=make('a','button','View résumé (PDF) ↗');a.href=config.resume;a.target='_blank';a.rel='noopener noreferrer';document.querySelector('#resume-link').replaceChildren(a);}
+  if(config.resume){const a=make('a','button','View resume (PDF) ↗');a.href=config.resume;a.target='_blank';a.rel='noopener noreferrer';document.querySelector('#resume-link').replaceChildren(a);}
   if(config.email){const a=make('a','',config.email+' ↗');a.href='mailto:'+config.email;document.querySelector('#email-link').append(a);document.querySelector('.contact>p:not(.eyebrow)').textContent='Connect on GitHub or send me an email.';}
 })();
