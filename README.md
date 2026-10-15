@@ -1,6 +1,6 @@
 # Sardar Said — mechanical engineering portfolio
 
-A buildless, responsive website prepared for **https://sardarsaid.github.io**. No real project models, images, resume, email address, personal contributions, or engineering results were supplied; these remain explicit placeholders.
+A buildless, responsive website prepared for **https://sardarsaid.github.io**. Includes the supplied V6 engine screenshots, resume PDF, public email, and confirmed personal project description. Interactive GLB models and the other project write-ups remain pending.
 
 ## Publish on GitHub Pages
 

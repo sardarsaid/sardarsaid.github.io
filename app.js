@@ -19,8 +19,21 @@
     const plus=make('div','plus','+'); plus.setAttribute('aria-hidden','true');
     placeholder.append(plus,make('strong','',p.model?'Interactive model':'Model preview coming soon'),make('p','',p.model?'Load the model to explore it in 3D.':'The actual project export will appear here.'));
     if(p.image){const img=make('img');img.src=p.image;img.alt=p.imageAlt||p.title+' project image';img.loading='lazy';img.addEventListener('error',()=>{img.remove();viewport.append(placeholder);});viewport.append(img);}else viewport.append(placeholder);
-    const status=make('p','model-status',p.model?'3D available · Load on demand':'Awaiting project assets'); status.setAttribute('role','status');
+    const status=make('p','model-status',p.model?'3D available · Load on demand':p.image?'CAD screenshots · Interactive model coming soon':'Awaiting project assets'); status.setAttribute('role','status');
     media.append(viewport,status);
+    if(p.gallery?.length){
+      const gallery=make('div','gallery');gallery.setAttribute('role','group');gallery.setAttribute('aria-label',p.title+' screenshot views');
+      const full=make('a','full-image','Open full-size image ↗');full.href=p.image;full.target='_blank';full.rel='noopener noreferrer';
+      p.gallery.forEach(item=>{
+        const button=make('button','gallery-button',item.label);button.type='button';button.setAttribute('aria-pressed',String(item.src===p.image));
+        button.onclick=()=>{
+          let img=viewport.querySelector('img');
+          if(!img){img=make('img');viewport.replaceChildren(img);}
+          img.src=item.src;img.alt=item.alt;full.href=item.src;
+          gallery.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+        };gallery.append(button);
+      });media.append(gallery,full);
+    }
     if(p.model){
       const actions=make('div','model-actions');const load=make('button','','Load 3D model');load.type='button';actions.append(load);media.append(actions);
       load.addEventListener('click',async()=>{
